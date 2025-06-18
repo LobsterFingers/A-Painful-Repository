@@ -13,7 +13,6 @@
 
     <div class="content">
         <p>Scroll down to see the sticky text box stay in place.</p>
-        <!-- Add more content to enable scrolling -->
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
         <p style="margin-top: 2000px;">End of content.</p>
     </div>
