@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sticky Text Box</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <style>
+    #toggle-popup {
+      display: none;
+    }
+
+    .popup {
+      position: fixed;
+      bottom: 10%;
+      right: 3%;
+      background: radial-gradient(#adadff 40%, #ffffff 100%);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      font-size: clamp(0.8rem, 2vw, 1.5rem);
+      z-index: 9999;
+      max-width: 300px;
+    }
+
+    #toggle-popup:checked ~ .popup {
+      display: none;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: red;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="sticky-box">
-        This is a sticky text box.
-    </div>
+<input type="checkbox" id="toggle-popup">
 
-    <div class="content">
-        <p>Scroll down to see the sticky text box stay in place.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <p style="margin-top: 2000px;">End of content.</p>
-    </div>
+<div class="popup">
+  <label for="toggle-popup" class="close-btn">×</label>
+  This is your pop-up message!
+</div>
 
 </body>
 </html>
